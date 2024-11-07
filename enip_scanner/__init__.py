@@ -9,3 +9,4 @@ This is my click command-line app project.
 """
 
 from .version import __version__, __release__  # noqa
+
