@@ -72,10 +72,30 @@ def cli(info: Info, verbose: int):
 @pass_info
 def hello(_: Info):
     """Say 'hello' to the nice people."""
-    click.echo("escanner says 'hellooooooooooooooooooo'")
+    click.echo("escanner says ''")
 
 
 @cli.command()
 def version():
     """Get the library version."""
     click.echo(click.style(f"{__version__}", bold=True))
+
+
+@cli.command()
+def art():
+    ASCII_LOGO = """
+   _____          __                                                            
+  /  _  \ ______ |  | ______                                                     
+ /  /_\  \\____ \|  |/ |__  \                                                    
+/    |    \  |_> >    < / __ \_                                                  
+\____|__  /   __/|__|_ (____  /                                                  
+        \/|__|        \/    \/                                                   
+            ________             __      ___.                                    
+            \______ \   ____    |__| ____\_ |__ _____    ____ _____              
+             |    |  \ /  _ \   |  |/ __ \| __ \\__  \  /    \\__  \             
+             |    `   (  <_> )  |  \  ___/| \_\ \/ __ \|   |  \/ __ \_           
+ ___________/_______  /\____/\__|  |\___  >___  (____  /___|  (____  /___________
+/_____/_____/       \/      \______|    \/    \/     \/     \/     \/_____/_____/
+"""
+
+    click.echo(click.style(ASCII_LOGO, bold=True))
